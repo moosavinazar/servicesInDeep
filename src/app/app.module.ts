@@ -22,7 +22,7 @@ export const MYCOMPANY_SERVICE_TOKEN = new InjectionToken<MyCompanyService>('MYC
     BrowserModule
   ],
   providers: [
-    { provide: MyCompanyService, useFactory: myCompanyServiceProvider}
+    { provide: MyCompanyService, useClass: MyCompanyService}
   ],
   bootstrap: [AppComponent]
 })
