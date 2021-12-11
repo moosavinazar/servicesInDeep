@@ -9,7 +9,7 @@ import {MYCOMPANY_SERVICE_TOKEN} from "./app.module";
 })
 export class AppComponent {
 
-  constructor(@Inject(MYCOMPANY_SERVICE_TOKEN) private myCompanyService: MyCompanyService) {
+  constructor(private myCompanyService: MyCompanyService) {
   }
 
   title = 'servicesInDeep';
