@@ -1,5 +1,5 @@
-import {Component, Inject} from '@angular/core';
-import {DEVICE_NAME_TOKEN} from "./app.module";
+import {Component, Optional} from '@angular/core';
+import {MyCompanyService} from "./my-company.service";
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,7 @@ import {DEVICE_NAME_TOKEN} from "./app.module";
 })
 export class AppComponent {
 
-  constructor(@Inject(DEVICE_NAME_TOKEN) private deviceName: string) {
-    console.log(deviceName);
-  }
+  constructor(@Optional() private myCompanyService: MyCompanyService) {}
 
   title = 'servicesInDeep';
 }
